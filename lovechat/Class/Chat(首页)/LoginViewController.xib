@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="lovechat" customModuleProvider="target">
             <connections>
+                <outlet property="passWord" destination="6vp-KH-6Of" id="9sl-En-fQc"/>
+                <outlet property="userName" destination="qcw-9X-Njy" id="icQ-ou-YOf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,34 +21,117 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMz-Hs-ZXd">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-9X-Njy">
+                                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                        <rect key="frame" x="87" y="17" width="208" height="30"/>
+                                    </variation>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-iI-9Ao">
+                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                        <rect key="frame" x="23" y="21" width="56" height="21"/>
+                                    </variation>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" red="1" green="0.6996801976" blue="0.32677782430000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="qcw-9X-Njy"/>
+                                    <exclude reference="Mdc-iI-9Ao"/>
+                                </mask>
+                            </variation>
                             <variation key="widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="0.0" y="36" width="320" height="63"/>
+                                <mask key="subviews">
+                                    <include reference="qcw-9X-Njy"/>
+                                    <include reference="Mdc-iI-9Ao"/>
+                                </mask>
                             </variation>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8s-kg-ljF">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5G-Mk-kVq">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            <color key="backgroundColor" red="0.78216560999999996" green="1" blue="0.60143055229999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vp-KH-6Of">
+                                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                        <rect key="frame" x="87" y="17" width="208" height="30"/>
+                                    </variation>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzX-DQ-Ibe">
+                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                        <rect key="frame" x="29" y="20" width="39" height="19.5"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.52007316262195213" green="1" blue="0.39821486534711703" alpha="1" colorSpace="calibratedRGB"/>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="6vp-KH-6Of"/>
+                                    <exclude reference="uzX-DQ-Ibe"/>
+                                </mask>
+                            </variation>
                             <variation key="widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="0.0" y="107" width="320" height="63"/>
+                                <mask key="subviews">
+                                    <include reference="6vp-KH-6Of"/>
+                                    <include reference="uzX-DQ-Ibe"/>
+                                </mask>
                             </variation>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.6149726807" blue="0.97630029780000005" alpha="1" colorSpace="calibratedRGB"/>
                     <variation key="default">
                         <mask key="subviews">
                             <exclude reference="kMz-Hs-ZXd"/>
-                            <exclude reference="q8s-kg-ljF"/>
+                            <exclude reference="a5G-Mk-kVq"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="148" width="320" height="200"/>
+                        <rect key="frame" x="0.0" y="124" width="320" height="200"/>
                         <mask key="subviews">
                             <include reference="kMz-Hs-ZXd"/>
-                            <include reference="q8s-kg-ljF"/>
+                            <include reference="a5G-Mk-kVq"/>
                         </mask>
                     </variation>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGE-3i-D80">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="登录">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="72" y="368" width="48" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="haB-cI-Sk4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2c-4T-rNT">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="注册">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="179" y="368" width="45" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="register:" destination="-1" eventType="touchUpInside" id="fxf-ia-p4u"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -54,11 +139,15 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="MDJ-KN-m1p"/>
+                    <exclude reference="FGE-3i-D80"/>
+                    <exclude reference="H2c-4T-rNT"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="MDJ-KN-m1p"/>
+                    <include reference="FGE-3i-D80"/>
+                    <include reference="H2c-4T-rNT"/>
                 </mask>
             </variation>
         </view>

@@ -29,7 +29,7 @@
  @brief 是否已经开启自动登录
  @discussion
  */
-@property (nonatomic) BOOL isAutoLoginEnabled;
+@property (nonatomic, assign) BOOL isAutoLoginEnabled;
 
 /*!
  @property

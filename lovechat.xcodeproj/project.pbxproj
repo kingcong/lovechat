@@ -13,6 +13,8 @@
 		E6744FEF1B70A573001BE989 /* lovechatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6744FEE1B70A573001BE989 /* lovechatTests.swift */; };
 		E6AF83301B712D52002C8BBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF832E1B712D52002C8BBC /* LoginViewController.swift */; };
 		E6AF83311B712D52002C8BBC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AF832F1B712D52002C8BBC /* LoginViewController.xib */; };
+		E6B225011B71AE9200E23578 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B225001B71AE9200E23578 /* AccountManager.swift */; };
+		E6B225051B71F7AB00E23578 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B225041B71F7AB00E23578 /* Constant.swift */; };
 		F0EC1397C1C06D550D5A5EDC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC24E700973855816334D42 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		E6744FF81B70DDED001BE989 /* lovechat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lovechat-Bridging-Header.h"; sourceTree = "<group>"; };
 		E6AF832E1B712D52002C8BBC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E6AF832F1B712D52002C8BBC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E6B225001B71AE9200E23578 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		E6B225041B71F7AB00E23578 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = ../../../../../Documents/Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		E60156CA1B711388003029CB /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E6B224FD1B71AE8100E23578 /* IM */,
 				E6AF832D1B712D3F002C8BBC /* Login(登录) */,
 				E60156CB1B711388003029CB /* Chat(首页) */,
 				E60156CC1B711388003029CB /* Common */,
@@ -88,6 +93,7 @@
 		E60156CC1B711388003029CB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E6B225041B71F7AB00E23578 /* Constant.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -185,6 +191,30 @@
 			children = (
 			);
 			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		E6B224FD1B71AE8100E23578 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				E6B224FE1B71AE8100E23578 /* UserManager */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		E6B224FE1B71AE8100E23578 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				E6B224FF1B71AE8100E23578 /* Account */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
+		E6B224FF1B71AE8100E23578 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				E6B225001B71AE9200E23578 /* AccountManager.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		F7AE2E7419D89F93B8B9E700 /* Pods */ = {
@@ -341,6 +371,8 @@
 			files = (
 				E6AF83301B712D52002C8BBC /* LoginViewController.swift in Sources */,
 				E6744FDE1B70A573001BE989 /* AppDelegate.swift in Sources */,
+				E6B225011B71AE9200E23578 /* AccountManager.swift in Sources */,
+				E6B225051B71F7AB00E23578 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

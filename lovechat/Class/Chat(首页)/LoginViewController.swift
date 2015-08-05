@@ -8,32 +8,67 @@
 
 import UIKit
 
+let ease = EaseMob.sharedInstance()
+
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var userName: UITextField!
+    
+    @IBOutlet weak var passWord: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
+    
+    // MARK: 登录注册点击事件
+    @IBAction func login(sender: AnyObject)
+    {
+        if self.userName.text.isEmpty || self.passWord.text.isEmpty{
+            println("用户名或密码为空")
+            return
+        }
+        println("正在登录")
+        
+        // 登录方法
+        ease.chatManager.asyncLoginWithUsername(self.userName.text, password: self.passWord.text, completion: { (loginInfo, error: EMError!) -> Void in
+            if (!(error != nil)&&loginInfo != nil) {
+                println(loginInfo)
+                
+                // 存储登录状态
+                var defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setBool(true, forKey: ISLOGINSUCCESS)
+                defaults.synchronize()
+                
+            }else{
+                println("信息\(loginInfo)")
+            }
+        
+        }, onQueue: nil)
+    }
+    
+    @IBAction func register(sender: AnyObject) {
+        // 注册方法
+        ease.chatManager.asyncRegisterNewAccount("wangcong", password: "123456", withCompletion: { (userName:String!, password: String!, error: EMError!) -> Void in
+            if !(error != nil) {
+                println("注册成功")
+            }
+            }, onQueue: nil)
+    }
+
+    // MARK: 下面的方法是将登录控制器与xib绑定
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        //println(nibName);
     }
     convenience init() {
         var nibNameOrNil = String?("LoginViewController")
-        
-        //考虑到xib文件可能不存在或被删，故加入判断
-//        if NSBundle.mainBundle().pathForResource(nibNameOrNil, ofType: "xib") == nil{   nibNameOrNil = nil}
         
         self.init(nibName: nibNameOrNil, bundle: nil)
     }
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 
 }
