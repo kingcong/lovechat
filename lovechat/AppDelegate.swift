@@ -25,11 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.makeKeyAndVisible()
         
+        // 登录控制器
         let loginVc = LoginViewController()
         
-        self.window?.rootViewController = loginVc
+        // tabBar控制器
+        let homeTabVc = HomeViewController()
+        
+        // 设置window的根控制器
+        self.setRootVc(loginVc: loginVc, homeTabVc: homeTabVc)
         
         return true
+    }
+    
+    // MARK: 设置根控制器
+    func setRootVc(#loginVc: LoginViewController, homeTabVc: HomeViewController){
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var isLoginSuccess = defaults .boolForKey(ISLOGINSUCCESS)
+        if isLoginSuccess {
+            self.window?.rootViewController = homeTabVc
+        }else{
+            self.window?.rootViewController = loginVc
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

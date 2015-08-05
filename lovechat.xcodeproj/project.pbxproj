@@ -15,6 +15,11 @@
 		E6AF83311B712D52002C8BBC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AF832F1B712D52002C8BBC /* LoginViewController.xib */; };
 		E6B225011B71AE9200E23578 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B225001B71AE9200E23578 /* AccountManager.swift */; };
 		E6B225051B71F7AB00E23578 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B225041B71F7AB00E23578 /* Constant.swift */; };
+		E6B225081B71FB1D00E23578 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B225071B71FB1D00E23578 /* HomeViewController.swift */; };
+		E6B2250A1B71FBAA00E23578 /* ChatListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B225091B71FBAA00E23578 /* ChatListTableViewController.swift */; };
+		E6B2250C1B71FBC900E23578 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2250B1B71FBC900E23578 /* ContactListViewController.swift */; };
+		E6B2250E1B71FC4D00E23578 /* HomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2250D1B71FC4D00E23578 /* HomeNavViewController.swift */; };
+		E6B225101B71FCB300E23578 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2250F1B71FCB300E23578 /* MineViewController.swift */; };
 		F0EC1397C1C06D550D5A5EDC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC24E700973855816334D42 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +47,15 @@
 		E6744FED1B70A573001BE989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6744FEE1B70A573001BE989 /* lovechatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lovechatTests.swift; sourceTree = "<group>"; };
 		E6744FF81B70DDED001BE989 /* lovechat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lovechat-Bridging-Header.h"; sourceTree = "<group>"; };
-		E6AF832E1B712D52002C8BBC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E6AF832F1B712D52002C8BBC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E6AF832E1B712D52002C8BBC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../Chat(首页)/LoginViewController.swift"; sourceTree = "<group>"; };
+		E6AF832F1B712D52002C8BBC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = "../Chat(首页)/LoginViewController.xib"; sourceTree = "<group>"; };
 		E6B225001B71AE9200E23578 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		E6B225041B71F7AB00E23578 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = ../../../../../Documents/Constant.swift; sourceTree = "<group>"; };
+		E6B225071B71FB1D00E23578 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E6B225091B71FBAA00E23578 /* ChatListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListTableViewController.swift; sourceTree = "<group>"; };
+		E6B2250B1B71FBC900E23578 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		E6B2250D1B71FC4D00E23578 /* HomeNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavViewController.swift; sourceTree = "<group>"; };
+		E6B2250F1B71FCB300E23578 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				E6B224FD1B71AE8100E23578 /* IM */,
+				E60156CC1B711388003029CB /* Common */,
 				E6AF832D1B712D3F002C8BBC /* Login(登录) */,
 				E60156CB1B711388003029CB /* Chat(首页) */,
-				E60156CC1B711388003029CB /* Common */,
 				E60156CD1B711388003029CB /* Contact(联系人) */,
 				E60156CE1B711388003029CB /* Main */,
 				E60156CF1B711388003029CB /* Mine(我的) */,
@@ -84,8 +94,7 @@
 		E60156CB1B711388003029CB /* Chat(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				E6AF832E1B712D52002C8BBC /* LoginViewController.swift */,
-				E6AF832F1B712D52002C8BBC /* LoginViewController.xib */,
+				E6B225091B71FBAA00E23578 /* ChatListTableViewController.swift */,
 			);
 			path = "Chat(首页)";
 			sourceTree = "<group>";
@@ -101,6 +110,7 @@
 		E60156CD1B711388003029CB /* Contact(联系人) */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2250B1B71FBC900E23578 /* ContactListViewController.swift */,
 			);
 			path = "Contact(联系人)";
 			sourceTree = "<group>";
@@ -108,6 +118,8 @@
 		E60156CE1B711388003029CB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E6B225071B71FB1D00E23578 /* HomeViewController.swift */,
+				E6B2250D1B71FC4D00E23578 /* HomeNavViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -115,6 +127,7 @@
 		E60156CF1B711388003029CB /* Mine(我的) */ = {
 			isa = PBXGroup;
 			children = (
+				E6B2250F1B71FCB300E23578 /* MineViewController.swift */,
 			);
 			path = "Mine(我的)";
 			sourceTree = "<group>";
@@ -189,6 +202,8 @@
 		E6AF832D1B712D3F002C8BBC /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
+				E6AF832E1B712D52002C8BBC /* LoginViewController.swift */,
+				E6AF832F1B712D52002C8BBC /* LoginViewController.xib */,
 			);
 			path = "Login(登录)";
 			sourceTree = "<group>";
@@ -369,9 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B225081B71FB1D00E23578 /* HomeViewController.swift in Sources */,
+				E6B2250A1B71FBAA00E23578 /* ChatListTableViewController.swift in Sources */,
+				E6B225101B71FCB300E23578 /* MineViewController.swift in Sources */,
 				E6AF83301B712D52002C8BBC /* LoginViewController.swift in Sources */,
+				E6B2250E1B71FC4D00E23578 /* HomeNavViewController.swift in Sources */,
 				E6744FDE1B70A573001BE989 /* AppDelegate.swift in Sources */,
 				E6B225011B71AE9200E23578 /* AccountManager.swift in Sources */,
+				E6B2250C1B71FBC900E23578 /* ContactListViewController.swift in Sources */,
 				E6B225051B71F7AB00E23578 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,6 +41,10 @@ class LoginViewController: UIViewController {
                 defaults.setBool(true, forKey: ISLOGINSUCCESS)
                 defaults.synchronize()
                 
+                // 进入主控制器
+                let homeVc = HomeViewController()
+                self.view.window?.rootViewController = homeVc
+                
             }else{
                 println("信息\(loginInfo)")
             }
