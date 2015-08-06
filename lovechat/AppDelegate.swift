@@ -42,7 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = NSUserDefaults.standardUserDefaults()
         var isLoginSuccess = defaults .boolForKey(ISLOGINSUCCESS)
         if isLoginSuccess {
-            self.window?.rootViewController = homeTabVc
+//            self.window?.rootViewController = homeTabVc
+            self.window?.rootViewController = loginVc
         }else{
             self.window?.rootViewController = loginVc
         }
